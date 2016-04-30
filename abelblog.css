@@ -21,12 +21,18 @@ h1,h2,h3{
     color:#222222;
 }
 
+
 img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
     width:1000px;
     height:300px;
 }
 
 h1{
+    width:300px;
+    height:120px;
     font-size:2em;
 }
 
@@ -34,6 +40,9 @@ h2{
     font-size:2.8em;
 }
 
+ul{
+    list-style:none;
+}
 p,ul,ol{
     margin-top:0;
     line-height:180%;
@@ -42,6 +51,63 @@ p,ul,ol{
 div{
     display:block;
 }
+
+a:link{
+  text-decoration:none;  
+}
+
+#logo{
+    float:left;
+    width:300px;
+    margin:0;
+    padding:0;
+    
+}
+
+#logo h1{
+    line-height: 120px;
+    letter-spacing: -2px;
+    font-size:3.8em;
+}
+
+#menu{
+    text-align:right;
+    display:inline-block;
+    width:500px;
+    height:90px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#menu ul{
+    float:right;
+    margin:0;
+    padding:20px 0px 0px 0px;
+    
+}
+
+#menu a{
+    display:block;
+    line-height:100px;
+    margin-right: 1px;
+    padding: 0px 20px 0px 20px;
+    text-decoration: none;
+    text-align: center;
+    text-shadow:1px 1px 0px rgba(0,0,0,.2);
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #1f1f1f;
+    border:none;
+}
+
+#menu a:hover, #menu .current_page_item a {
+	background: black repeat;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
 
 .post .title a{
     border:none;
@@ -74,42 +140,6 @@ div{
     margin: 0 auto;
 }
 
-#menu{
-    float:right;
-    width:500px;
-    height:90px;
-    margin: 0 auto;
-    padding: 0;
-}
-
-#menu ul{
-    float:right;
-    margin:0;
-    padding:20px 0px 0px 0px;
-}
-
-#menu a{
-    display:block;
-    line-height:100px;
-    margin-right: 1px;
-    padding: 0px 20px 0px 20px;
-    text-decoration: none;
-    text-align: center;
-    text-shadow:1px 1px 0px rgba(0,0,0,.2);
-    text-transform: uppercase;
-    font-family: 'Oswald', sans-serif;
-    font-size: 16px;
-    font-weight: 300;
-    color: #1f1f1f;
-    border:none;
-}
-
-#menu a:hover, #menu .current_page_item a {
-	background: black repeat;
-	text-decoration: none;
-	color: #FFFFFF;
-}
-
 
 #header-wrapper{
     overflow:hidden;
@@ -117,12 +147,6 @@ div{
 
 #wrapper{
     background:#ffffff;
-}
-
-#logo h1{
-    line-height: 120px;
-    letter-spacing: -2px;
-    font-size:3.8em;
 }
 
 
