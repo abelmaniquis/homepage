@@ -52,8 +52,8 @@ div{
     display:block;
 }
 
-a:link{
-  text-decoration:none;  
+p{
+    text-index:50px
 }
 
 #logo{
@@ -73,7 +73,7 @@ a:link{
 #menu{
     text-align:right;
     display:inline-block;
-    width:500px;
+    width:700px;
     height:90px;
     margin: 0 auto;
     padding: 0;
@@ -81,9 +81,10 @@ a:link{
 
 #menu ul{
     float:right;
-    margin:0;
     padding:20px 0px 0px 0px;
-    
+}
+#menu ul li{
+    display:inline-block;
 }
 
 #menu a{
@@ -92,7 +93,7 @@ a:link{
     margin-right: 1px;
     padding: 0px 20px 0px 20px;
     text-decoration: none;
-    text-align: center;
+    text-align: left;
     text-shadow:1px 1px 0px rgba(0,0,0,.2);
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
