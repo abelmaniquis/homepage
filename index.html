@@ -33,13 +33,181 @@
 	
 	<div id="page">
 		<div id="content">
+			
+			
+			<div class="post">
+				<h2 class="title">Dear Rubber Duck</h2>
+				<p class="meta"><span class="date">May 2, 2016</span><span class="posted"> Posted by: <a href="#">Abel Maniquis</a></span></p>
+				<div style="clear: both;">&nbsp;</div>
+				<div class="entry">
+					<p>
+						Today begins the first of many similar entries that will serve as the meat and bones of this blog.
+						I'll be tracking my progress on the projects that I am working on, and explain my thought process while working
+						through said projects. Hopefully, by explaining my reasoning here to you, the reader, it will help my own
+						understanding. In order to explain a topic to somebody else, you have to be able to explain it to yourself first.
+						I'll also be posting code snippets here as well (which will help with my HTML skills). Sometimes when writing a program,
+						as with writing an essay or a novel, it's easy to find one's self drifting off and just doing things with no foresight or
+						logic. I hope to remedy that behavior in myself through this blog.
+					</p>
+				
+					<p>
+						The industry has a term for this: <a href="https://en.wikipedia.org/wiki/Rubber_duck_debugging">Rubber Duck Debugging</a>. So
+						I bestow upon you reader, the title of Rubber Duck. Congratulations.
+					</p>
+					
+					<p>
+						This post's project is a quiz app. I'm supposed to build a program that asks 5 or more multiple choice questions to the
+						user. The quiz topic can be anything I choose. The program is supposed to tell the user whether or not they are incorrect,
+						it's then supposed to track the user's answers and output a final score. It's a simple app, but underneath the hood, it's
+						powered by many important concepts in Javascript, in particular, objects and functions.
+					</p>
+					
+					
+					<p>
+						While the curriculum wants me to wireframe what the app will look like, I prefer to start with figuring out the Javascript
+						logic first.
+					</p>
+					
+					<p>To start off, this: </p>
+					<xmp>
+		var question1 = {statement: 'According to Batman Vol.1 #673, 
+				how long did Bruce Wayne train with "Ninja shadow masters" in the far east?',
+        			choices:["one year","two years","five years","eight years"],
+        			answer: 1};
+					</xmp>
+					
+					<p>
+						This will be the format of a multiple choice question. I figure that each question has three elements:
+						<ol>
+							<li>A statement of the question expressed as a string</li>
+							<li>A list of potential items expressed as an array</li>
+							<li>An index for the correct answer, expressed as an integer, or an index to the array.</li>
+						</ol>
+					</p>
+					
+					<p>
+						Also, you might notice that I have chosen to make the quiz about Batman. I was originally intending to brush up on my math skills
+						by asking 5 word problems involving Bernoulli trials, as these problems are easily convertible to word problems. Then I realized that
+						it probably wasn't a good idea to be juggling around statistics on top of the Javascript that I already have to figure out, so I decided
+						to put this Batman trivia book that I have lying around to good use.
+					</p>
+					
+					<p>
+						So I have five of these questions lined up, and have written the following function:
+					</p>
+					
+						<xmp>
+			function feedback(input,question){
+    			if(question.choices[input] === question.choices[question.answer]){
+        		return "correct";
+    			}
+    			else{
+        		return "incorrect";
+    			}
+			};
+						</xmp>
+					<p>
+						However, using (question.choices[input] === question.choices[question.answer]) is redundant. I can shorten the 
+						statement to (input === question.answer)
+					</p>
+					
+					
+					<p>
+					Here's the code that I have so far, I haven't applied jQuery to it yet, so the best I can do is console log the questions and
+					statements and see if the correct output is returned, which is what is happening.
+					</p>
+					
+					<xmp>
+						       var question1 = {statement: 'According to Batman Vol.1 #673, how long did Bruce Wayne train with "Ninja shadow masters" in the far east?',
+        choices: ["one year","two years","five years","eight years"],
+        answer: 1};
+        
+        var question2 ={statement: 'Dick Grayson chose "Robin as his first superhero alias. What was the original reason for this?"',
+          choices: ["His mother nicknamed him Robin since he once leaped through the air to save his brother","He intended to emulate Robin Hood","It was his nickname when  he was performing with the circus.","His mother nicknamed him Robin because he was born in the first day of Spring"],
+          answer: 1};
+         
+        var question3 = {statement: "In Batman: The Animated Series, who became the Clock King?",
+            choices: ["Temple Fugate","Templeton Fugit", "William Tockman", "Victor Zasz"],
+            answer: 0};
+            
+        var question4 = {statement: "Wayne Manor is generally thought to be how far outside of Gotham City?",
+            choices: ["5 miles","8 miles","12 miles","20 miles","23 miles"],
+            answer: 2}
+        
+        var question5 = {statement:'Which anthology contains a Batman Story by Isaac Asimov, who has been called the "grandfather of science fiction"?',
+            choices:["Tales of the Batman","The Adventures of the Batman","The Further Adventures of Batman, Vol 3","Legends of the Batman"],
+            answer: 0}
+        
+        var questionarray = [question1,question2,question3,question4,question5];
+
+
+function feedback(input,question){
+    if(question.choices[input] === question.choices[question.answer]){
+        return "correct";
+    }
+    else{
+        return "incorrect";
+    }
+};
+
+
+function feedback2(input,question){
+    if(input === question.answer){
+        return "correct";
+    }
+    else{
+        return "incorrect";
+    }
+};
+					</xmp>
+					<p class="links"><a href="#" class="more">Read More</a><a href="#" title="b0x" class="comments"> Comments</a></p>
+				</div>
+			</div>
+			
+			
+			
+			
+			<div class="post">
+				<h2 class="title">Sunday Reflection: Financial Technologies</h2>
+				<p class="meta"><span class="date">May 1, 2016</span><span class="posted"> Posted by: <a href="#">Abel Maniquis</a></span></p>
+				<div style="clear: both;">&nbsp;</div>
+				<div class="entry">
+					
+					<p>
+						Tonight, 60 minutes aired a story about new Financial Apps that are set to disrupt the banking industry. The story was very relevant
+						to my interests and my experiences. In 2011, I graduated from UC San Diego with a Bachelor's degree in economics, and in the ensuing job
+						hunt, quickly discovered that, despite being educated at an institution known for its science and technology programs, I had been woefully
+						unprepared for an economy that was slowly becoming increasingly technology driven.
+					</p>
+					<p>
+						I applied to many places, banks mostly. And found myself competing with upwards of a couple dozen people for a single bank teller position,
+						among the applicants were MBAs and various others with a lot of experience in the world of finance and sales. Charisma and sales ability are not exactly
+						my specialty, but I am still interested in markets and how they function.
+					</p>
+					<p>
+						The 60 Minutes story covered Stripe, a mobile app that allows people and companies to make payments directy over their phone. They provide
+						an API on <a href="https://stripe.com/">their website,</a> which I'll take the time to explore later. It looks like the API allows you to design
+						customized payment forms and, according to their site, allows the collection of credit card and bank account details without touching the server.
+					</p>
+					<p>
+						I am currently in the second half of Thinkful's Front End Web Development course, and at the end of this section, you have to complete an API project. I'll be looking
+						at Stripe a little more closely for this project.
+						
+					</p>
+					<p class="links"><a href="#" class="more">Read More</a><a href="#" title="b0x" class="comments"> Comments</a></p>
+				</div>
+			</div>
+			<div style="clear: both;">&nbsp;</div>
+		</div>
+			
+			
 			<div class="post">
 				<h2 class="title"><a href="#">Refactoring all my code</a></h2>
 				<p class="meta"><span class="date">April 30, 2016</span><span class="posted"> Posted by: <a href="#">Abel Maniquis</a></span></p>
 				<div style="clear: both;">&nbsp;</div>
 				<div class="entry">
 					
-					<p>Today, I will be refactoring all of my code.</p>
+					<p>Today, I'm going to start rebuilding all of my projects and refactor code so that it will all appear on this site.</p>
 						
 					<p class="links"><a href="#" class="more">Read More</a><a href="#" title="b0x" class="comments"> Comments</a></p>
 				</div>
@@ -93,18 +261,8 @@
 					<p class="links"><a href="#" class="more">Read More</a><a href="#" title="b0x" class="comments"> Comments</a></p>
 				</div>
 			</div>
-			<div style="clear: both;">&nbsp;</div>
+		<div style="clear: both;">&nbsp;</div> <!--Non breakable space prevents automatic line break-->
 		</div>
-		<!-- end #content -->
-	<!--	<div id="sidebar">
-			<ul>
-				<li>
-			 		<h2>Categories</h2>
-				</li>
-			</ul>
-		</div>-->
-		<!-- end #sidebar -->
-		<div style="clear: both;">&nbsp;</div>
 	</div>
 	<!-- end #page --> 
 </div>
